@@ -592,6 +592,10 @@ html[lang="th"] .footer__col-hd{letter-spacing:0}
   font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;
   color:rgba(245,239,228,.25);
 }
+/* Powered by DeeLabs — text only, inherits the footer's type and colour */
+.deelabs-badge{font:inherit;color:inherit;text-decoration:none;transition:color .2s}
+.deelabs-badge:hover{color:rgba(245,239,228,.6)}
+.deelabs-badge b{font-weight:700}
 
 /* ------ DESKTOP ------ */
 @media(min-width:768px){
