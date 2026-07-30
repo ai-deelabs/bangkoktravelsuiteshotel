@@ -702,6 +702,7 @@ tw.addEventListener('click',function(e){if(dragged){e.preventDefault();e.stopPro
     if(!cur)return;
     idx=(i+cur.imgs.length)%cur.imgs.length;
     lbImg.src=cur.imgs[idx];
+    lbImg.alt=cur.title+' — '+(idx+1)+' / '+cur.imgs.length;
     lbCount.textContent=(idx+1)+' / '+cur.imgs.length;
     var ts=lbThumbs.children;
     for(var t=0;t<ts.length;t++)ts[t].classList.toggle('active',t===idx);
@@ -724,7 +725,7 @@ tw.addEventListener('click',function(e){if(dragged){e.preventDefault();e.stopPro
   function close(){
     lb.classList.remove('open');lb.setAttribute('aria-hidden','true');
     document.body.classList.remove('lb-lock');
-    lbImg.src='';cur=null;
+    lbImg.removeAttribute('src');lbImg.alt='';cur=null;
   }
 
   // Add a "N photos" cue badge to every gallery trigger
