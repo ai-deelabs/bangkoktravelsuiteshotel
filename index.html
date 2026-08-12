@@ -209,7 +209,7 @@
       </div>
     </div>
     <div class="panel rv d1" data-gallery="lobby" role="button" tabindex="0" aria-label="View lobby photos">
-      <img src="assets/img/lobby/line_oa_chat_260706_145431.jpg" alt="Hotel lobby lounge" loading="lazy" data-dee-img="d201">
+      <img src="/assets/uploads/7edb6ee975a89f8c.webp" alt="Hotel lobby lounge" loading="lazy" data-dee-img="d201">
       <div class="panel__veil"></div>
       <div class="panel__lbl">
         <span class="panel__tag" data-dee="d72">— ARRIVAL</span>
@@ -517,7 +517,9 @@
   <div class="footer__bottom">
     <span data-lang-th="© 2026 Bangkok Travel Suites Hotel. สงวนลิขสิทธิ์" data-lang-en="© 2026 Bangkok Travel Suites Hotel. All rights reserved." data-dee="d193" data-dee-en="d194">© 2026 Bangkok Travel Suites Hotel. สงวนลิขสิทธิ์</span>
     <span data-lang-th="ออกแบบด้วยความใส่ใจ" data-lang-en="Crafted with care" data-dee="d195" data-dee-en="d196">ออกแบบด้วยความใส่ใจ</span>
-    <a class="deelabs-badge" href="https://deelabs.co/?utm_source=badge&amp;utm_medium=referral&amp;utm_campaign=bangkok-travel-suites" target="_blank" rel="noopener noreferrer">Powered by <b>DeeLabs</b></a>
+    <a href="https://deelabs.co/?utm_source=badge&amp;utm_medium=referral&amp;utm_campaign=bangkok-travel-suites" target="_blank" rel="noopener noreferrer" style="display:inline-block;opacity:.65">
+      <img src="https://badge.deelabs.co/badge.svg" alt="Powered by DeeLabs" width="148" height="34" loading="lazy" data-dee-img="d215">
+    </a>
   </div>
 </footer>
 
@@ -693,7 +695,6 @@ tw.addEventListener('click',function(e){if(dragged){e.preventDefault();e.stopPro
     if(!cur)return;
     idx=(i+cur.imgs.length)%cur.imgs.length;
     lbImg.src=cur.imgs[idx];
-    lbImg.alt=cur.title+' — '+(idx+1)+' / '+cur.imgs.length;
     lbCount.textContent=(idx+1)+' / '+cur.imgs.length;
     var ts=lbThumbs.children;
     for(var t=0;t<ts.length;t++)ts[t].classList.toggle('active',t===idx);
@@ -716,7 +717,7 @@ tw.addEventListener('click',function(e){if(dragged){e.preventDefault();e.stopPro
   function close(){
     lb.classList.remove('open');lb.setAttribute('aria-hidden','true');
     document.body.classList.remove('lb-lock');
-    lbImg.removeAttribute('src');lbImg.alt='';cur=null;
+    lbImg.src='';cur=null;
   }
 
   // Add a "N photos" cue badge to every gallery trigger
